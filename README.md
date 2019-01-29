@@ -383,9 +383,9 @@ postgres=# \q
 
 -- Exit postgres user
 $ exit
+```
 
 Use 'postgresql://catalog:catalog@localhost/catalog' as database url in 'db_models.py' 'db_util.py' and 'server.py' in item-catalog
-```
 
 ### 19. Clone item-catalog git repository, put oauth2 data and install python packages
 
@@ -419,7 +419,7 @@ if __name__ == "__main__":
     APP.run("localhost", port=5000, threaded=True)
 ```
 
-**Put the Google and Facebook OAuth2 data in oauth_data directory. (Refer [README.txt](oauth_data/README.txt) in oauth_data for more info)**
+**Put the Google and Facebook OAuth2 data in oauth_data directory. (Refer `oauth_data/README.txt` in item-catalog repo for more info)**
 
 ### 20. Configure gunicorn server and systemd service to manage the backend server
 
