@@ -4,6 +4,33 @@ Udacity Full Stack Developer Nanodegree :: Deploying Item Catalog web applicatio
 
 Take a baseline installation of a Linux distribution on a virtual machine and prepare it to host your web applications, to include installing updates, securing it from a number of attack vectors and installing/configuring web and database servers.
 
+- [Linux Server Configuration](#linux-server-configuration)
+  - [Deployment Details](#deployment-details)
+  - [Deployment Steps](#deployment-steps)
+    - [1. Initial login to the server as user `ubuntu`](#1-initial-login-to-the-server-as-user-ubuntu)
+    - [2. Update the operating system pakages and reboot if required](#2-update-the-operating-system-pakages-and-reboot-if-required)
+    - [3. Configure automatic security and critical updates](#3-configure-automatic-security-and-critical-updates)
+    - [4. Set timezone to UTC](#4-set-timezone-to-utc)
+    - [5. Create user `grader`](#5-create-user-grader)
+    - [6. Create passwords for users `ububtu` and `grader` to do ssh-copy-id](#6-create-passwords-for-users-ububtu-and-grader-to-do-ssh-copy-id)
+    - [7. Add user `grader` to sudoers list](#7-add-user-grader-to-sudoers-list)
+    - [8. Create SSH Keypairs for users `ubuntu` and `grader`](#8-create-ssh-keypairs-for-users-ubuntu-and-grader)
+    - [9. Create a keypair in your local machine](#9-create-a-keypair-in-your-local-machine)
+    - [10. Enable SSH logins through passwords in server temporarily](#10-enable-ssh-logins-through-passwords-in-server-temporarily)
+    - [11. `ssh-copy-id` the local machines' public key to `grader`](#11-ssh-copy-id-the-local-machines-public-key-to-grader)
+    - [12. Disable SSH logins through passwords in server permanently](#12-disable-ssh-logins-through-passwords-in-server-permanently)
+    - [13. Install Apache2 and enable required proxy modules](#13-install-apache2-and-enable-required-proxy-modules)
+    - [14. Configure firewall to allow OpenSSH, 'Apache Full', port 80, 123 and 2200](#14-configure-firewall-to-allow-openssh-apache-full-port-80-123-and-2200)
+    - [15. Enable port 2200 and HTTPS in the Lightsail VM Networking settings](#15-enable-port-2200-and-https-in-the-lightsail-vm-networking-settings)
+    - [16. Disable root login through SSH, change SSH port and add aloowed users to SSH config](#16-disable-root-login-through-ssh-change-ssh-port-and-add-aloowed-users-to-ssh-config)
+    - [17. Install Pip and Virtualenv, create a virtual environment for webapp](#17-install-pip-and-virtualenv-create-a-virtual-environment-for-webapp)
+    - [18. Install PostgreSQL and setup item-catalog database](#18-install-postgresql-and-setup-item-catalog-database)
+    - [19. Clone item-catalog git repository, put oauth2 data and install python packages](#19-clone-item-catalog-git-repository-put-oauth2-data-and-install-python-packages)
+    - [20. Configure gunicorn server and systemd service to manage the backend server](#20-configure-gunicorn-server-and-systemd-service-to-manage-the-backend-server)
+    - [21. Configue Apache2 server to be a reverse proxy, add domain name](#21-configue-apache2-server-to-be-a-reverse-proxy-add-domain-name)
+    - [22. Configure HTTPS and SSL](#22-configure-https-and-ssl)
+  - [References](#references)
+
 ## Deployment Details
 
 - Application URL: https://md-item-catalog.ml
