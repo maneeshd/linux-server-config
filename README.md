@@ -385,7 +385,7 @@ postgres=# \q
 $ exit
 ```
 
-Use 'postgresql://catalog:catalog@localhost/catalog' as database url in 'db_models.py' 'db_util.py' and 'server.py' in item-catalog
+Use **`postgresql://catalog:catalog@localhost/catalog`** as database url in `db_models.py` `db_util.py` and s`erver.py` in item-catalog
 
 ### 19. Clone item-catalog git repository, put oauth2 data and install python packages
 
@@ -469,7 +469,10 @@ $ sudo systemctl status ItemCatalog
  Main PID: 17468 (gunicorn)
     Tasks: 4 (limit: 547)
    CGroup: /system.slice/ItemCatalog.service
-           ├─17468 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload          ├─17491 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload         ├─17492 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload        └─17493 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload
+           ├─17468 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload
+           ├─17491 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload
+           ├─17492 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload
+           └─17493 /home/grader/fenv/bin/python3 /home/grader/fenv/bin/gunicorn -c gunicorn.conf -b localhost:5000 wsgi:APP --preload
 Jan 28 13:00:07 ip-172-26-6-133 systemd[1]: Stopped Gunicorn instance to serve Item-Catalog.
 Jan 28 13:00:07 ip-172-26-6-133 systemd[1]: Started Gunicorn instance to serve Item-Catalog.
 lines 1-13/13 (END)
